@@ -1,0 +1,33 @@
+{% extends "_base.html" %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+  <div class="container">
+    <table class="col-md-4">
+      <tr>
+        <th>First Name</th><th>Last Name</th><th>Date Of Birth</th>
+      </tr>
+      {% for person in data %}
+      <tr>
+        <td>{{person.firstname}}</td><td>{{person.lastname}}</td><td>{{person.dob}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <form class="col-md-2 col-md-offset-2" method="post" id="myform">
+      <label for="firstname">First Name</label>
+      <input type="text" name="firstname" class="form-control" id="firstname">
+      <label for="lastname">Last Name</label>
+      <input type="text" name="lastname" class="form-control" id="lastname">
+      <label for="dob">Date Of Birth(mm-dd-yyyy)</label>
+      <input type="text" name="dob" class="form-control" id="dob">
+      <label for="eyecolor">Eye Color</label>
+      <input type="text" name="eyecolor" class="form-control" id="eyecolor">
+      <label for="phone">Phone Number</label>
+      <input type="text" name="phone" class="form-control" id="phone">
+    </form>
+    <button type="submit" form='myform' name="button"></button>
+  </div>
+{% endblock %}

@@ -6,11 +6,10 @@
 
     // *** routes *** //
     const routes = require('../routes/index');
-    const names = require('../routes/names');
+    const contacts = require('../routes/contacts');
     // *** register routes *** //
     app.use('/', routes);
-    app.use('/names', names);
-
+    app.use('/contacts', contacts);
   };
 
 })(module.exports);

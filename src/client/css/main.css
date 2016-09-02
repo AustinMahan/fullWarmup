@@ -1,1 +1,9 @@
-
+td, table, th {
+  border: 1px solid black;
+  text-align: center;
+  font-size: 12px;
+  padding: 2px 10px;
+}
+td{
+  margin: 10px;
+}
